@@ -22,7 +22,7 @@ export function UseProductList(props) {
     );
   }
 
-  const slicedProducts = productsState.slice(0, props.count);
+  const slicedProducts = productsState.filter(item => item.id !== props.id).slice(0, props.count);
 
   return (
     <div className="productContainer">
